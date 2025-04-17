@@ -56,6 +56,12 @@
             key-positions = <17 18>; // K + L
             bindings = <&kp BSPC>;
         };
+        
+        combo_bspc2 {
+            timeout-ms = <50>;
+            key-positions = <8 9>; // O + P
+            bindings = <&kp BSPC>;
+        };
 
         combo_caps_oneshot {
             timeout-ms = <50>;
@@ -87,15 +93,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │  `       │  &       │  *       │  (       │  )       │
-            &trans     &trans     &trans     &trans     &trans         &kp GRAVE  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR
+            &none      &none      &none      &none      &none          &kp GRAVE  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  \       │  $       │  %       │  ^       │  =       │
-            &trans     &trans     &trans     &trans     &trans         &kp BSLH   &kp DLLR   &kp PRCNT  &kp CARET  &kp EQUAL
+            &none      &none      &none      &none      &none          &kp BSLH   &kp DLLR   &kp PRCNT  &kp CARET  &kp EQUAL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │  !       │  @       │  #       │  _       │
-            &trans     &trans     &trans     &trans     &trans         &trans     &kp EXCL   &kp AT     &kp HASH   &kp UNDER 
+            &none      &none      &none      &none      &none          &none      &kp EXCL   &kp AT     &kp HASH   &kp UNDER 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -103,19 +109,37 @@
         numbers_layer { // 2
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │          │  7       │  8       │  9       │  0       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &trans     &kp N7     &kp N8     &kp N9     &kp N0   
+        //│          │          │          │          │          │   │          │  7       │  8       │  9       │  0       │
+            &none      &none      &none      &none      &none          &none      &kp N7     &kp N8     &kp N9     &kp N0   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │  4       │  5       │  6       │          │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LEFT   &kp N4     &kp N5     &kp N6    &trans
+        //│          │          │          │          │          │   │          │  4       │  5       │  6       │          │
+            &none      &none      &none      &none      &none          &none      &kp N4     &kp N5     &kp N6     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │  1       │  2       │  3       │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &kp N1     &kp N2     &kp N3     &trans
+        //│          │          │          │          │          │   │          │  1       │  2       │  3       │          │
+           &none       &none      &none      &none      &none          &none      &kp N1     &kp N2     &kp N3     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                             &none      &none          &none      &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
+        
+        navigation_layer { // 3
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &kp HOME   &none      &kp UP     &none      &kp PG_UP      &none      &none      &none      &none      &none   
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &kp END    &kp RIGHT  &kp DOWN   &kp LEFT   &kp PG_DN      &none      &none      &none      &none      &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &kp K_APP  &none      &none          &none      &none      &none      &none      &none
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &none      &none          &none     &none
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
 
 
         tri_layer {

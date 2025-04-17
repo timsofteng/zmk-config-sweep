@@ -35,13 +35,13 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <10 11>; // A + S
+            key-positions = <0 1>; // Q + W
             bindings = <&kp ESC>;
         };
 
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <11 12>; // S + D
+            key-positions = <10 11>; // A + S
             bindings = <&kp TAB>;
         };
 
@@ -53,17 +53,11 @@
 
         combo_bspc {
             timeout-ms = <50>;
-            key-positions = <17 18>; // K + L
-            bindings = <&kp BSPC>;
-        };
-        
-        combo_bspc2 {
-            timeout-ms = <50>;
             key-positions = <8 9>; // O + P
             bindings = <&kp BSPC>;
         };
 
-        combo_caps_oneshot {
+        combo_caps_word {
             timeout-ms = <50>;
             key-positions = <10 19>; // A + ;
             bindings = <&caps_word>; 
@@ -84,7 +78,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt 2 LBKT  &lt 1 SQT      &kp SPACE   &kp RBKT
+                                           &lt 2 LBKT  &lt 1 SQT      &lt 3 SPACE &kp RBKT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };

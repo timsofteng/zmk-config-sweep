@@ -35,13 +35,13 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <11 12>; // S + D
+            key-positions = <10 11>; // A + S
             bindings = <&kp ESC>;
         };
 
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <12 13>; // D + F
+            key-positions = <11 12>; // S + D
             bindings = <&kp TAB>;
         };
 

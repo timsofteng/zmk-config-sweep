@@ -93,9 +93,9 @@
             &none      &none      &none      &none      &none          &kp BSLH   &kp DLLR   &kp PRCNT  &kp CARET  &kp EQUAL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │  !       │  @       │  #       │  _       │
-            &none      &none      &none      &none      &none          &none      &kp EXCL   &kp AT     &kp HASH   &kp UNDER 
+            &none      &none      &none      &none      &none          &none      &kp EXCL   &kp AT     &kp HASH   &kp MINUS 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none      &none          &none      &none 
+                                             &none      &none          &trans     &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -112,7 +112,7 @@
         //│          │          │          │          │          │   │          │  1       │  2       │  3       │          │
            &none       &none      &none      &none      &none          &none      &kp N1     &kp N2     &kp N3     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none      &none          &none      &none 
+                                             &none      &none          &trans     &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };

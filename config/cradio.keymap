@@ -24,25 +24,25 @@
         retm: return_m {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp m>, <&kp RETURN>;
+            bindings = <&kp M>, <&kp RETURN>;
             mods = <(MOD_LCTRL)>;
         };
         tabi: tab_i {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp i>, <&kp TAB>;
+            bindings = <&kp I>, <&kp TAB>;
             mods = <(MOD_LCTRL)>;
         };
         bspch: backspace_h {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp h>, <&kp BSPC>;
+            bindings = <&kp H>, <&kp BSPC>;
             mods = <(MOD_LCTRL)>;
         };
         escsemi: escape_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ;>, <&kp ESC>;
+            bindings = <&kp SEMI>, <&kp ESC>;
             mods = <(MOD_LCTRL)>;
         };
     };
